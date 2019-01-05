@@ -4,7 +4,6 @@ import Prompt from "./Prompt";
 class PromptButton extends Component {
   constructor(props) {
     super(props);
-
     this.state = { isOpen: false, text: "默认文本" };
   }
 
@@ -54,6 +53,7 @@ class PromptButton extends Component {
           show={this.state.isOpen}
           onClose={this.handleClose}
           onConfirm={this.handleConfirm}
+          text={this.state.text}
         >
           通用弹框
         </Prompt>

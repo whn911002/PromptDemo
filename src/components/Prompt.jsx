@@ -34,7 +34,9 @@ class Prompt extends React.Component {
         <div id="modalDemo" style={modalStyle}>
           {this.props.children}
           <br />
-          <textarea id="inputArea" rows="4" columns="10" />
+          <textarea id="inputArea" rows="4" columns="10">
+            {this.props.text}
+          </textarea>
           <div className="footer">
             <button
               className="btn btn-primary m-3"
@@ -60,7 +62,8 @@ class Prompt extends React.Component {
 Prompt.propTypes = {
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
-  show: PropTypes.bool
+  show: PropTypes.bool,
+  text: PropTypes.string
 };
 
 export default Prompt;
